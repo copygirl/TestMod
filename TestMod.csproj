@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    
+    <AssemblyTitle>TestMod</AssemblyTitle>
+    <Authors>copygirl</Authors>
+    <Version>0.1.0</Version>
+    
+    <Description>Vintage Story example mod for testing things</Description>
+    <RepositoryUrl>https://github.com/copygirl/CarryCapacity</RepositoryUrl>
+    
+    <TargetFramework>net452</TargetFramework>
+    
+  </PropertyGroup>
+  <ItemGroup>
+    
+    <Reference Include="VintagestoryAPI">
+      <HintPath>$(VINTAGE_STORY)\VintagestoryAPI.dll</HintPath>
+    </Reference>
+    
+  </ItemGroup>
+</Project>
