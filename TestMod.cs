@@ -7,6 +7,25 @@ namespace TestMod
 {
 	public class TestMod : ModBase
 	{
+		public static TestMod INSTANCE { get; private set; }
+		
+		public static ModInfo MOD_INFO { get; } = new ModInfo {
+			Name        = "TestMod",
+			Description = "Example mod for testing things",
+			Website     = "https://github.com/copygirl/TestMod",
+			Author      = "copygirl",
+			Version     = "0.1.0",
+		};
+		
+		
+		public override ModInfo GetModInfo() { return MOD_INFO; }
+		
+		public override void Start(ICoreAPI api)
+		{
+			base.Start(api);
+			INSTANCE = this;
+		}
+		
 		public override void StartServerSide(ICoreServerAPI api)
 		{
 			
