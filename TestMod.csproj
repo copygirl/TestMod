@@ -9,6 +9,7 @@
     <RepositoryUrl>https://github.com/copygirl/CarryCapacity</RepositoryUrl>
     
     <TargetFramework>net452</TargetFramework>
+    <LangVersion>latest</LangVersion>
     
   </PropertyGroup>
   <ItemGroup>
@@ -18,4 +19,7 @@
     </Reference>
     
   </ItemGroup>
+  <Target Name="Copy" AfterTargets="PostBuildEvent">
+    <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(VINTAGE_STORY)/Mods" />
+  </Target>
 </Project>
