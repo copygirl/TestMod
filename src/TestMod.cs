@@ -14,7 +14,6 @@ namespace TestMod
 			Description = "Example mod for testing things",
 			Website     = "https://github.com/copygirl/TestMod",
 			Author      = "copygirl",
-			Version     = "0.1.0",
 		};
 		
 		

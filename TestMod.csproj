@@ -1,26 +1,26 @@
 <Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    
-    <AssemblyTitle>TestMod</AssemblyTitle>
-    <Authors>copygirl</Authors>
-    <Version>0.1.0</Version>
-    
-    <Description>Vintage Story example mod for testing things</Description>
-    <RepositoryUrl>https://github.com/copygirl/TestMod</RepositoryUrl>
-    
-    <TargetFramework>net452</TargetFramework>
-    <LangVersion>latest</LangVersion>
-    
-  </PropertyGroup>
-  <ItemGroup>
-    
-    <Reference Include="VintagestoryAPI">
-      <HintPath>$(VINTAGE_STORY)/VintagestoryAPI.dll</HintPath>
-    </Reference>
-    
-  </ItemGroup>
-  <Target Name="Copy" AfterTargets="PostBuildEvent">
-    <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(VINTAGE_STORY_DATA)/Mods" />
-    <Copy SourceFiles="$(TargetDir)/$(TargetName).pdb" DestinationFolder="$(VINTAGE_STORY_DATA)/Mods" />
-  </Target>
+	<PropertyGroup>
+		
+		<AssemblyTitle>TestMod</AssemblyTitle>
+		<Authors>copygirl</Authors>
+		<Version>0.1.0</Version>
+		
+		<Description>Vintage Story example mod for testing things</Description>
+		<RepositoryUrl>https://github.com/copygirl/TestMod</RepositoryUrl>
+		
+		<TargetFramework>net452</TargetFramework>
+		<LangVersion>latest</LangVersion>
+		
+	</PropertyGroup>
+	<ItemGroup>
+		
+		<Reference Include="VintagestoryAPI">
+			<HintPath>$(VINTAGE_STORY)/VintagestoryAPI.dll</HintPath>
+		</Reference>
+		
+	</ItemGroup>
+	<Target Name="Copy" AfterTargets="PostBuildEvent" Condition="'$(Configuration)' == 'Debug'">
+		<Copy SourceFiles="$(TargetPath)" DestinationFolder="$(VINTAGE_STORY_DATA)/Mods" />
+		<Copy SourceFiles="$(TargetDir)/$(TargetName).pdb" DestinationFolder="$(VINTAGE_STORY_DATA)/Mods" />
+	</Target>
 </Project>

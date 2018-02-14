@@ -1,0 +1,10 @@
+
+{
+	"type": "core",
+	"name": "TestMod",
+	"description" : "Example mod for testing things",
+	"website": "https://github.com/copygirl/TestMod",
+	"author": "copygirl",
+	"version": "0.1.0",
+	"gameversions": [ "1.5.0.4+" ]
+}
